@@ -23,8 +23,8 @@ logger = logging.getLogger(__name__)
 # تنظیمات پیش‌فرض
 CONFIG_FILE = "bot_config.json"
 DEFAULT_CONFIG = {
-    "host_usernames": ["_.90.769._"],
-    "admin_usernames": ["_.90.769._"],
+    "host_usernames": ["Q_F7"],
+    "admin_usernames": ["Q_F7"],
     "vip_usernames": [],
     "banned_users": [],
     "teleport_locations": {
@@ -1093,7 +1093,7 @@ class AdvancedBot(BaseBot):
         messages = {
             "fa": {
                 "welcome": self.config["welcome_message"],
-                "invalid_command": "❌ دستور نامعلوم! برای دیدن دستورات بات !help استفاده کنید یا به @_.90.769._ پیام بدید.",
+                "invalid_command": "❌ دستور نامعلوم! برای دیدن دستورات بات !help استفاده کنید یا به @Q_F7 پیام بدید.",
                 "no_permission": "فقط ادمین‌ها می‌توانند از این دستور استفاده کنند!",
                 "user_not_found": "کاربر {username} آنلاین نیست.",
                 "invalid_format": "فرمت نادرست: {format}",
@@ -1302,7 +1302,7 @@ class AdvancedBot(BaseBot):
             elif msg_lower in ["stop", "استوپ"]:
                 await self.stop_dance(user)
             elif msg_lower in ["سازنده", "creature", "creator", "سازندت", "سازنده بات"]:
-                await self.highrise.chat("👑 سازنده این بات: @ad0ri 👑")
+                await self.highrise.chat("👑 سازنده این بات: Q_F7 👑")
             elif msg_lower.startswith("!"):
                 parts = msg.split()
                 parts_lower = [p.lower() for p in parts]
@@ -1333,7 +1333,7 @@ class AdvancedBot(BaseBot):
             "🔹 میزبانی ۲۴ ساعته و آنلاین بدون قطعی روی سرورهای قدرتمند ⚡\n\n"
             "🤝 **شرایط رنت (اجاره):**\n"
             "برای اجاره یا همان رنت این ربات فوق‌العاده برای روم خود، لطفاً همین الان به آیدی زیر پیام بدید:\n"
-            "👉 @_.90.769._ 👈"
+            "👉 @Q_F7 👈"
         )
         
         try:
@@ -1437,7 +1437,7 @@ class AdvancedBot(BaseBot):
             "!party @username عدد - اجرای رقص اجباری برای کاربر\n"
             "!party all عدد - اجرای رقص برای همه\n"
             "!partys @username - توقف رقص اجباری کاربر\n\n"
-            "📩 برای اطلاعات بیشتر به @_85.872_ پیام بدید!"
+            "📩 برای اطلاعات بیشتر به @Q_F7 پیام بدید!"
         )
         for chunk in [help_text[i:i+200] for i in range(0, len(help_text), 200)]:
             await self.highrise.chat(chunk)
@@ -2713,8 +2713,8 @@ async def main():
     from http.server import BaseHTTPRequestHandler, HTTPServer
     
     logger.info("تلاش برای بارگذاری متغیرهای محیطی...")
-    room_id = os.getenv("ROOM_ID", "6aa5d5f749e5f0369cdf0d30")
-    api_token = os.getenv("API_TOKEN", "3d863289c33a46c0871fe44fd8a9e915f1369bba1971a486a8d6e3288551e4ff")
+    room_id = os.getenv("ROOM_ID", "6a634ae32c35dc88968dc228")
+    api_token = os.getenv("API_TOKEN", "cb7d566c43b4dc13c34116fba3e8078ee9e8488c57dc268ab6bcb2974f02485b")
     
     if not room_id or not api_token:
         logger.error("ROOM_ID یا API_TOKEN تنظیم نشده‌اند.")
